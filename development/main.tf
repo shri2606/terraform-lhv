@@ -3,8 +3,6 @@ provider "aws" {
 }
 
 
-
-
 terraform {
   backend "s3" {
     bucket         = "shridharlighthousedevstatefile"
@@ -56,7 +54,5 @@ module "rds" {
   subnet_ids          = module.vpc.private_subnet_ids
   security_group_ids  = [module.vpc.private_security_group_id]
   environment          = "dev"
-#   db_name             = var.rds_db_name
-#   db_username         = var.rds_db_username
-#   db_password         = var.rds_db_password
+
 }
