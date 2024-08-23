@@ -16,10 +16,6 @@ variable "instance_type" {
   description = "EC2 instance type"
 }
 
-# variable "ssh_key_name" {
-#   description = "Name of the SSH key pair to use for EC2 instances"
-# }
-
 variable "security_group_ids" {
   description = "List of security group IDs to attach to EC2 instances"
   type        = list(string)
@@ -28,4 +24,16 @@ variable "security_group_ids" {
 variable "subnet_ids" {
   description = "List of subnet IDs to launch EC2 instances in"
   type        = list(string)
+}
+
+variable "iam_instance_profile" {
+  description = "IAM instance profile for EC2"
+  type        = string
+  default     = null
+}
+
+variable "user_data" {
+  description = "User data script for EC2"
+  type        = string
+  default     = null
 }
