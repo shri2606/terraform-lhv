@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS region to deploy resources"
-  default     = "us-west-1"
+  default     = "us-east-1"
 }
 
 variable "vpc_cidr_block" {
@@ -34,7 +34,7 @@ variable "ec2_instance_type" {
 
 variable "ec2_ami" {
   description = "AMI ID for EC2 instances"
-  default     = "ami-04fdea8e25817cd69"  
+  default     = "ami-066784287e358dad1"  
 }
 
 variable "rds_engine" {
@@ -47,10 +47,6 @@ variable "rds_engine_version" {
   default     = "16.4"
 }
 
-# variable "s3_bucket_name" {
-#   description = "Name of the S3 bucket"
-# }
-
 variable "rds_instance_class" {
   description = "RDS instance class"
   default     = "db.t3.medium"
@@ -60,3 +56,4 @@ variable "rds_allocated_storage" {
   description = "Allocated storage for RDS instance (in GB)"
   default     = 50
 }
+
